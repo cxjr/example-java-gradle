@@ -27,8 +27,8 @@ jobs:
         run: | 
           wget -O ScaResolver-linux64.tar.gz https://sca-downloads.s3.amazonaws.com/cli/1.2.3/ScaResolver-linux64.tar.gz
           tar -xf ScaResolver-linux64.tar.gz
-          ScaResolver -h
           ls -larh
+          ScaResolver -h
           
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
