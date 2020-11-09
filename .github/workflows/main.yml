@@ -28,8 +28,7 @@ jobs:
           wget -O ScaResolver-linux64.tar.gz https://sca-downloads.s3.amazonaws.com/cli/1.2.3/ScaResolver-linux64.tar.gz
           mkdir ./resolver
           tar -xf ScaResolver-linux64.tar.gz --directory ./resolver
-          ls -larh
-          ./resolver/ScaResolver -h
+          ./resolver/ScaResolver -s ./ -e resolver -u ${{ secrets.CHECKMARX_SCA_USER }} -p ${{ secrets.CHECKMARX_SCA_PASSWORD }} -a ${{ secrets.CHECKMARX_SCA_ACCOUNT }} -n resolver_test 
           
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
