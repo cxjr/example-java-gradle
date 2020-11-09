@@ -26,8 +26,8 @@ jobs:
       - name: Run a one-line script
         run: | 
           wget -O ScaResolver-linux64.tar.gz https://sca-downloads.s3.amazonaws.com/cli/1.2.3/ScaResolver-linux64.tar.gz
-          mkdir ~/resolver
-          tar -xf ScaResolver-linux64.tar.gz --directory ~/resolver
+          mkdir ./resolver
+          tar -xf ScaResolver-linux64.tar.gz --directory ./resolver
           ls -larh
           ./resolver/ScaResolver -h
           
